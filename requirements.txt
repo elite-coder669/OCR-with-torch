@@ -1,0 +1,6 @@
+streamlit
+watchdog
+scikit-learn
+torch
+torchvision
+tqdm
