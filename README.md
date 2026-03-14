@@ -64,7 +64,7 @@ This project is licensed under the **MIT License**.
 
 If you use this project in your own work, research, or applications, please provide attribution to the original author:
 
-**Author:** [mallupeddivamsikrishna](https://github.com/elite-coder669)
+**Author:** [Mallupeddi Vamsi Krishna](https://github.com/elite-coder669)
 
 **Project Link:** [https://github.com/elite-coder669/OCR-with-torch](https://www.google.com/search?q=https://github.com/elite-coder669/OCR-with-torch)
 
