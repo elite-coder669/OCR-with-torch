@@ -16,8 +16,8 @@ if __name__ == '__main__':
         device = torch.device("cpu")
     print(f"Using device: {device}")
 
-    train_dir = Path('/Users/mallupeddivamsikrishna/.cache/kagglehub/datasets/sujaymann/handwritten-english-characters-and-digits/versions/6/handwritten-english-characters-and-digits/combined_folder/train')
-    test_dir = Path('/Users/mallupeddivamsikrishna/.cache/kagglehub/datasets/sujaymann/handwritten-english-characters-and-digits/versions/6/handwritten-english-characters-and-digits/combined_folder/test')
+    train_dir = Path('./datasets/sujaymann/handwritten-english-characters-and-digits/versions/6/handwritten-english-characters-and-digits/combined_folder/train')
+    test_dir = Path('./datasets/sujaymann/handwritten-english-characters-and-digits/versions/6/handwritten-english-characters-and-digits/combined_folder/test')
 
 
     train_transforms = transforms.Compose([
