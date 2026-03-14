@@ -1,6 +1,9 @@
 streamlit
-watchdog
-scikit-learn
+streamlit-drawable-canvas
 torch
 torchvision
 tqdm
+scikit-learn
+matplotlib
+Pillow
+numpy
