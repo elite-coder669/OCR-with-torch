@@ -1,71 +1,48 @@
-# OCR-with-torch 🔍
+# OCR-with-torch
 
-A high-performance Convolutional Neural Network (CNN) built with PyTorch, designed to recognize handwritten characters across 62 distinct classes.
+A convolutional neural network for handwritten character recognition — covering 62 classes (A–Z, a–z, 0–9) with 95% accuracy.
 
-## 🚀 About the Project
-This model is capable of identifying handwritten text with high precision, supporting:
-* **Uppercase Letters:** A-Z
-* **Lowercase Letters:** a-z
-* **Digits:** 0-9
+## Stack
 
-The architecture is optimized to handle the nuances of varied handwriting styles, achieving a robust **95% accuracy rate** on the test dataset.
+- Python 3
+- PyTorch — model architecture and training
+- Streamlit — interactive web demo
+- OpenCV — image preprocessing
+- Matplotlib — visualization
 
-## 📊 Key Features
-* **62-Class Classification:** Full alphanumeric support.
-* **High Accuracy:** 95% success rate in character recognition.
-* **PyTorch Backend:** Optimized for GPU acceleration and flexibility.
-* **Pre-processing Pipeline:** Includes image normalization and noise reduction for real-world handwritten samples.
+## How it works
 
----
+A deep CNN is trained on the A-Z + a-z + 0-9 handwritten character dataset. The model architecture uses convolutional layers for feature extraction followed by fully connected layers for classification.
 
-## 🛠 Installation & Setup
+Training includes data augmentation, learning rate scheduling, and checkpoint-based early stopping. The best-performing weights are saved and loaded for inference.
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/elite-coder669/OCR-with-torch.git](https://github.com/elite-coder669/OCR-with-torch.git)
-   cd OCR-with-torch
+A Streamlit app provides a web interface: upload or draw a character and the model predicts it in real-time.
 
-```
+## Key features
 
-2. **Set up a virtual environment:**
+- 62-class character recognition (mixed case + digits)
+- 95% test accuracy
+- Streamlit web interface for interactive testing
+- Training pipeline with augmentation and checkpointing
+- Pre-trained weights included
+
+## What this demonstrates
+
+- Deep CNN architecture design and training
+- PyTorch data pipeline (loaders, transforms, augmentation)
+- Model evaluation and checkpoint management
+- Building a web demo with Streamlit
+- Image preprocessing for OCR
+
+## Run locally
+
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-
+pip install torch torchvision streamlit opencv-python pillow matplotlib
+streamlit run streamlit_app.py
 ```
 
+For training from scratch:
 
-3. **Install dependencies:**
 ```bash
-pip install -r requirements.txt
-
+python ocr.py
 ```
-
-
-
----
-
-## 🏗 Model Architecture
-
-The project utilizes a custom **Convolutional Neural Network (CNN)**. Key layers include:
-
-* Multiple `Conv2d` layers for feature extraction.
-* `MaxPool2d` for spatial dimensionality reduction.
-* `Dropout` layers to prevent overfitting.
-* `Linear` fully connected layers leading to a 62-way Softmax output.
-
----
-
-## 📜 License & Attribution
-
-This project is licensed under the **MIT License**.
-
-### How to Attribute
-
-If you use this project in your own work, research, or applications, please provide attribution to the original author:
-
-**Author:** [Mallupeddi Vamsi Krishna](https://github.com/elite-coder669)
-
-**Project Link:** [https://github.com/elite-coder669/OCR-with-torch](https://www.google.com/search?q=https://github.com/elite-coder669/OCR-with-torch)
-
-> *“Innovation is better when shared, but credit makes it sustainable.”*
