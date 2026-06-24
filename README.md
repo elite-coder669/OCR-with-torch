@@ -1,5 +1,12 @@
 # OCR-with-torch
 
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.x-FF4B4B)
+![Accuracy](https://img.shields.io/badge/accuracy-95%25-brightgreen)
+![License](https://img.shields.io/badge/license-View--Only-lightgrey)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+
 A convolutional neural network for handwritten character recognition — covering 62 classes (A–Z, a–z, 0–9) with 95% accuracy.
 
 ## Stack
