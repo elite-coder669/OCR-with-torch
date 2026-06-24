@@ -12,9 +12,31 @@ A convolutional neural network for handwritten character recognition — coverin
 
 ## How it works
 
-A deep CNN is trained on the A-Z + a-z + 0-9 handwritten character dataset. The model architecture uses convolutional layers for feature extraction followed by fully connected layers for classification.
+A deep CNN is trained on the A-Z + a-z + 0-9 handwritten character dataset.
 
-Training includes data augmentation, learning rate scheduling, and checkpoint-based early stopping. The best-performing weights are saved and loaded for inference.
+```mermaid
+flowchart LR
+    subgraph Training["Training Pipeline"]
+        A[Dataset] --> B[Augmentation]
+        B --> C[CNN Layers]
+        C --> D[FC Layers]
+        D --> E[62-class Output]
+        E --> F{Loss converged?}
+        F -->|No| C
+        F -->|Yes| G[Save checkpoint]
+    end
+    
+    subgraph Inference["Inference (Streamlit)"]
+        H[Upload image] --> I[Preprocess]
+        I --> J[Load model weights]
+        J --> K[Predict class]
+        K --> L[Display result]
+    end
+    
+    G --> J
+```
+
+The model architecture uses convolutional layers for feature extraction followed by fully connected layers for classification. Training includes data augmentation, learning rate scheduling, and checkpoint-based early stopping. The best-performing weights are saved and loaded for inference.
 
 A Streamlit app provides a web interface: upload or draw a character and the model predicts it in real-time.
 
